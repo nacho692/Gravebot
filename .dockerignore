@@ -6,4 +6,5 @@ coverage/
 config.json
 config.js
 test.js
-src/
+.git/
+scripts/
