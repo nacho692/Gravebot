@@ -1,4 +1,4 @@
-import fetch from 'node-fetc';
+import fetch from 'node-fetch';
 
 export default {
 	reddit: (bot, msg, suffix) => {
