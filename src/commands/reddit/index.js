@@ -1,10 +1,8 @@
-import Promise from 'bluebird';
-import _request from 'request';
-const request = Promise.promisify(_request);
+import fetch from 'node-fetch';
 
 export default {
 	reddit: (bot, msg, suffix) => {
     	const command = suffix.toLowerCase().split(' ')[0];
-    	return request('https://www.reddit.com/domain/imgur.com/random.json').then(obj => bot.sendMessage(msg.channel, JSON.stringify(obj)));
+    	return fetch('https://www.reddit.com/domain/imgur.com/random.json').then(resp => resp.json()).then(json => bot.sendMessage(msg.channel, JSON.stringify(json)));
     }
 }
