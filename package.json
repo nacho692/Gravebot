@@ -77,7 +77,7 @@
     "test": "npm run lint && npm run mocha",
     "test-coverage": "npm run lint && babel-node node_modules/.bin/babel-istanbul cover --root ./src --include-all-sources true node_modules/.bin/_mocha -- ./tests/index.js",
     "kill": "killall -2 node",
-    "reset": "npm run kill && git pull && npm run build && npm start"
+    "reset": "git pull && npm run build && npm start"
   },
   "engines": {
     "node": "4.2.6",
